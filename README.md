@@ -4,6 +4,8 @@ Configure CORS in a Spring Boot REST application to make it accessible from a fr
 
 This is the client application of this exercise.
 
+Server side is available at https://github.com/czetsuya/spring-cors.
+
 ## Getting Started
 
 First, run the development server:
