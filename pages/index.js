@@ -22,6 +22,27 @@ const Home = () => {
     console.log(result)
   }
 
+  const getBooksViaClass = async () => {
+    const resp = await fetch(`${API_URL}/annotated-class/books`)
+    const result = await resp.json()
+    setBooks(result)
+    console.log(result)
+  }
+
+  const getBooksViaMethod = async () => {
+    const resp = await fetch(`${API_URL}/annotated-method/books`)
+    const result = await resp.json()
+    setBooks(result)
+    console.log(result)
+  }
+
+  const getBooksViaMethodNoAnnotation = async () => {
+    const resp = await fetch(`${API_URL}/annotated-method/books/restricted`)
+    const result = await resp.json()
+    setBooks(result)
+    console.log(result)
+  }
+
   return (
       <div className={styles.container}>
         <Head>
@@ -38,8 +59,11 @@ const Home = () => {
 
           <div>
             <h2>Actions</h2>
-            <div>
+            <div className={styles.actions}>
               <button onClick={getBooks}>Get Books</button>
+              <button onClick={getBooksViaClass}>Get Books via Class Annotation</button>
+              <button onClick={getBooksViaMethod}>Get Books via Method Annotation</button>
+              <button onClick={getBooksViaMethodNoAnnotation}>Get Books via Method no Annotation</button>
               <button onClick={getBooksViaApi}>Get Books via API</button>
             </div>
           </div>
@@ -62,7 +86,8 @@ const Home = () => {
               I would be most grateful for any support. Also, if you have suggestions for future topics I
               would love to hear your feedback.
               <br/><br/>
-              <div>Patreon: <a target="_blank" href="https://www.patreon.com/czetsuya">https://www.patreon.com/czetsuya</a></div>
+              <div>Patreon: <a target="_blank"
+                               href="https://www.patreon.com/czetsuya">https://www.patreon.com/czetsuya</a></div>
             </div>
           </div>
         </main>

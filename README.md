@@ -17,3 +17,7 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## References
+
+- https://www.czetsuyatech.com/2021/05/how-to-configure-cors-in-spring-boot.html

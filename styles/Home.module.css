@@ -119,3 +119,8 @@
     flex-direction: column;
   }
 }
+
+.actions button {
+  margin: 5px;
+  display: block;
+}
